@@ -1,9 +1,9 @@
 import React from "react";
 import { geolocated } from "react-geolocated";
 //https://www.npmjs.com/package/react-geolocated
-class App extends React.Component {
+class Geo extends React.Component {
     render() {
-        console.log(this.props);
+        //console.log(this.props);
         return !this.props.isGeolocationAvailable ? (
             <div>Your browser does not support Geolocation</div>
         ) : !this.props.isGeolocationEnabled ? (
@@ -23,14 +23,14 @@ class App extends React.Component {
                         <td>altitude</td>
                         <td>{this.props.coords.altitude}</td>
                     </tr>
-                    <tr>
+                    {/* <tr>
                         <td>heading</td>
                         <td>{this.props.coords.heading}</td>
                     </tr>
                     <tr>
                         <td>speed</td>
                         <td>{this.props.coords.speed}</td>
-                    </tr>
+                    </tr> */}
                 </tbody>
             </table>
         ) : (
@@ -44,4 +44,4 @@ export default geolocated({
         enableHighAccuracy: true,
     },
     userDecisionTimeout: 5000,
-})(App);
+})(Geo);

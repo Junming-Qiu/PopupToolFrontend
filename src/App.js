@@ -8,8 +8,8 @@ class App extends React.Component {
         return (
         <div>
             <h1>Popup Geolocation Tool</h1>
-            <Geo/>
             <Form/>
+            <Geo/>
         </div>
         )
     }        
