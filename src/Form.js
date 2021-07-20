@@ -5,30 +5,28 @@ class Form extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            shop_name: '',
-
-            mon_start: '',
-            tue_start: '',
-            wed_start: '',
-            thurs_start: '',
-            fri_start: '',
-            sat_start: '',
-            sun_start: '',
-
-            mon_duration: '',
-            tue_duration: '',
-            wed_duration: '',
-            thurs_duration: '',
-            fri_duration: '',
-            sat_duration: '', 
-            sun_duration: '',
+            shop_name: 'none',
+            mon_start: 'none',
+            tue_start: 'none',
+            wed_start: 'none',
+            thurs_start: 'none',
+            fri_start: 'none',
+            sat_start: 'none',
+            sun_start: 'none',
+            mon_duration: 'none',
+            tue_duration: 'none',
+            wed_duration: 'none',
+            thurs_duration: 'none',
+            fri_duration: 'none',
+            sat_duration: 'none', 
+            sun_duration: 'none',
         };
     }
 
     mySubmitHandler = (event) => {
         event.preventDefault();
-        alert("Submitted Info: " + this.state.shop_name + "\n" + this.state.mon_start + "\n"
-        + this.state.mon_duration);
+        console.log("Submitted Info")
+        console.log(this.state)
 
     }
 
@@ -46,7 +44,6 @@ class Form extends React.Component {
                 <h4>Shop Name</h4>
                 <input type="text" name="shop_name" onChange={this.myChangeHandler}/>
                 <br/><br/>
-                <h3>Schedule</h3>
 
                 <div className="grid-container">
                     <div className="grid-item">
@@ -54,60 +51,59 @@ class Form extends React.Component {
                         <h5>Start</h5>
                         <input type="time" name="mon_start" onChange={this.myChangeHandler}/>
                         <h5>Duration</h5>
-                        <input type="number" name="mon_duration" onChange={this.myChangeHandler}/>
+                        <input type="number" name="mon_duration" min="0" onChange={this.myChangeHandler}/>
                     </div>
 
                     <div className="grid-item">
                         <h4>Tuesday</h4>
                         <h5>Start</h5>
-                        <input type="time"/>
+                        <input type="time" name="tue_start" onChange={this.myChangeHandler}/>
                         <h5>Duration</h5>
-                        <input type="number"/>
+                        <input type="number" name="tue_duration" min="0" onChange={this.myChangeHandler}/>
                     </div>
                     
                     <div className="grid-item">
                         <h4>Wednesday</h4>
                         <h5>Duration</h5>
-                        <input type="time"/>
+                        <input type="time" name="wed_start" onChange={this.myChangeHandler}/>
                         <h5>Stop</h5>
-                        <input type="number"/>
+                        <input type="number" name="wed_duration" min="0" onChange={this.myChangeHandler}/>
                     </div>
 
                     <div className="grid-item">
                         <h4>Thursday</h4>
                         <h5>Start</h5>
-                        <input type="time"/>
+                        <input type="time" name="thurs_start" onChange={this.myChangeHandler}/>
                         <h5>Duration</h5>
-                        <input type="number"/>
+                        <input type="number" name="thurs_duration" min="0" onChange={this.myChangeHandler}/>
                     </div>
 
                     <div className="grid-item">
                         <h4>Friday</h4>
                         <h5>Start</h5>
-                        <input type="time"/>
+                        <input type="time" name="fri_start" onChange={this.myChangeHandler}/>
                         <h5>Duration</h5>
-                        <input type="number"/>
+                        <input type="number" name="fri_duration" min="0" onChange={this.myChangeHandler}/>
                     </div>
 
                     <div className="grid-item">
                         <h4>Saturday</h4>
                         <h5>Start</h5>
-                        <input type="time"/>
+                        <input type="time" name="sat_start" onChange={this.myChangeHandler}/>
                         <h5>Duration</h5>
-                        <input type="number"/>
+                        <input type="number" name="sat_duration" min="0" onChange={this.myChangeHandler}/>
                     </div>
 
                     <div className="grid-item">
                         <h4>Sunday</h4>
                         <h5>Start</h5>
-                        <input type="time"/>
+                        <input type="time" name="sun_start" onChange={this.myChangeHandler}/>
                         <h5>Duration</h5>
-                        <input type="number"/>
+                        <input type="number" name="sun_duration" min="0" onChange={this.myChangeHandler}/>
                     </div>
                 </div>
-                
-                <input type="submit"/>
-
+                <br/>
+                <input type="submit" value="Submit"/>
             </form>
         </div>
         )

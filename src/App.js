@@ -9,6 +9,7 @@ class App extends React.Component {
         <div>
             <h1>Popup Geolocation Tool</h1>
             <Form/>
+            <br/>
             <Geo/>
         </div>
         )
