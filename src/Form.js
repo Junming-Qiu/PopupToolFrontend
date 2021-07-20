@@ -1,5 +1,6 @@
 import React from "react";
 import "./Form.css";
+
 class Form extends React.Component {
     constructor(props) {
         super(props);
@@ -51,57 +52,57 @@ class Form extends React.Component {
                     <div className="grid-item">
                         <h4>Monday</h4>
                         <h5>Start</h5>
-                        <input type="text" name="mon_start" onChange={this.myChangeHandler}/>
+                        <input type="time" name="mon_start" onChange={this.myChangeHandler}/>
                         <h5>Duration</h5>
-                        <input type="text" name="mon_duration" onChange={this.myChangeHandler}/>
+                        <input type="number" name="mon_duration" onChange={this.myChangeHandler}/>
                     </div>
 
                     <div className="grid-item">
                         <h4>Tuesday</h4>
                         <h5>Start</h5>
-                        <input type="text"/>
+                        <input type="time"/>
                         <h5>Duration</h5>
-                        <input type="text"/>
+                        <input type="number"/>
                     </div>
                     
                     <div className="grid-item">
                         <h4>Wednesday</h4>
                         <h5>Duration</h5>
-                        <input type="text"/>
+                        <input type="time"/>
                         <h5>Stop</h5>
-                        <input type="text"/>
+                        <input type="number"/>
                     </div>
 
                     <div className="grid-item">
                         <h4>Thursday</h4>
                         <h5>Start</h5>
-                        <input type="text"/>
+                        <input type="time"/>
                         <h5>Duration</h5>
-                        <input type="text"/>
+                        <input type="number"/>
                     </div>
 
                     <div className="grid-item">
                         <h4>Friday</h4>
                         <h5>Start</h5>
-                        <input type="text"/>
+                        <input type="time"/>
                         <h5>Duration</h5>
-                        <input type="text"/>
+                        <input type="number"/>
                     </div>
 
                     <div className="grid-item">
                         <h4>Saturday</h4>
                         <h5>Start</h5>
-                        <input type="text"/>
+                        <input type="time"/>
                         <h5>Duration</h5>
-                        <input type="text"/>
+                        <input type="number"/>
                     </div>
 
                     <div className="grid-item">
                         <h4>Sunday</h4>
                         <h5>Start</h5>
-                        <input type="text"/>
+                        <input type="time"/>
                         <h5>Duration</h5>
-                        <input type="text"/>
+                        <input type="number"/>
                     </div>
                 </div>
                 
