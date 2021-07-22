@@ -3,7 +3,10 @@ import { geolocated } from "react-geolocated";
 //https://www.npmjs.com/package/react-geolocated
 class Geo extends React.Component {
     render() {
-        //console.log(this.props);
+        if (this.props.coords != null) {
+            console.log("Geo Props")
+            console.log(this.props);
+        }
         return !this.props.isGeolocationAvailable ? (
             <div>Your browser does not support Geolocation</div>
         ) : !this.props.isGeolocationEnabled ? (

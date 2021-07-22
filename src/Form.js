@@ -66,7 +66,7 @@ class Form extends React.Component {
                         <h4>Wednesday</h4>
                         <h5>Duration</h5>
                         <input type="time" name="wed_start" onChange={this.myChangeHandler}/>
-                        <h5>Stop</h5>
+                        <h5>Duration</h5>
                         <input type="number" name="wed_duration" min="0" onChange={this.myChangeHandler}/>
                     </div>
 
